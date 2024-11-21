@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Online Platform{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login/student/">Student Login</a></li>
+                <li><a href="/login/teacher/">Teacher Login</a></li>
+                <li><a href="/signup/student/">Student Signup</a></li>
+                <li><a href="/signup/teacher/">Teacher Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 Online Learning Platform. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
